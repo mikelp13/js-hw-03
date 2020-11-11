@@ -7,7 +7,7 @@
 
 
 
-// Приклад з вебінару
+// ================================ Приклад з вебінару =============================
 
 // const friends = [
 //   { name: 'Mango', online: false },
@@ -42,15 +42,9 @@
 
 // console.log(getAllNames(friends));
 
+// ===================================================================================
 
-
-// Додадкова задача
-/* Есть объект salaries с произвольным количеством свойств, содержащих заработные платы.
-Напишите функцию sumSalaries(salaries), 
-которая возвращает сумму всех зарплат с помощью метода Object.values и цикла for..of.
-Если объект salaries пуст, то результат должен быть 0.
-*/
-
+//================================ Додадкова задача 1 ================================
 
 // const salaries = {
 //   "John": 100,
@@ -72,3 +66,35 @@
 // };
 
 // console.log(sumSalaries(salaries));
+// =======================================================================================
+
+//================================ Додадкова задача 2 ====================================
+
+const users = [
+
+  {
+    name: undefined,
+    lastName: 'Bennington',
+    fullName: 'Chester Bennington ',
+  },
+  {
+    name: undefined,
+    lastName: 'Shinoda',
+    fullName: 'Mike Shinoda',
+  }
+
+]
+
+const restoreNames = function(users) {
+
+  for (const user of users) {
+    // console.log('user :>> ', user);
+    const fullNameArr = user.fullName.split(' ');
+    const firstName = fullNameArr[0];
+    user.name = firstName;
+  }
+  console.log('users :>> ', users);
+}
+
+restoreNames(users);
+// ========================================================================================
