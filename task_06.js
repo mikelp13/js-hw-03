@@ -1,30 +1,26 @@
-debugger;
 
 function calculateTotalPrice(array, prop) {
   'use strict';
   // Write code under this line
   const sameProductName = [];
   let totalPrice  = 0;
-
+// 
   for (const product of array) {
-    console.log(product);
 
     if (product.name === prop) {
       sameProductName.push(product);
       continue;
-    }
-    
-    // let a = 0;
+    } 
   }
-  console.log(sameProductName);
-
+ 
   for (const item of sameProductName) {
-    console.log(item);
+   
    const itemPrice = item.price * item.quantity;
     totalPrice += itemPrice;
   }
 
-  return totalPrice;
+  return  totalPrice;
+
 }
 
 
@@ -39,14 +35,14 @@ const products = [
   { name: 'Захват', price: 1200, quantity: 2 },
 ];
 
-// console.log(calculateTotalPrice(products, 'Радар'));
+ console.log(calculateTotalPrice(products, 'Радар'));
 // 9080
 
-//console.log(calculateTotalPrice(products, 'Сканер'));
+// console.log(calculateTotalPrice(products, 'Сканер'));
 // 10200
 
-console.log(calculateTotalPrice(products, 'Захват'));
+//console.log(calculateTotalPrice(products, 'Захват'));
 // 2400
 
-//console.log(calculateTotalPrice(products, 'Дроид'));
+// console.log(calculateTotalPrice(products, 'Дроид'));
 // 2800
