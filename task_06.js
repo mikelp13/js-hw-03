@@ -4,7 +4,7 @@ function calculateTotalPrice(array, prop) {
   // Write code under this line
   const sameProductName = [];
   let totalPrice  = 0;
-// 
+ 
   for (const product of array) {
 
     if (product.name === prop) {
